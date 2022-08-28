@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  nodeserver:
+    build: ./app
+    command: npm run dev
+    ports:
+      - "8080:8080"
+  reverse-proxy:
+    build: ./nginx
+    ports:
+      - "80:80"
