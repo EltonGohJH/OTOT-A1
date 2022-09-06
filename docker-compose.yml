@@ -3,8 +3,6 @@ services:
   nodeserver:
     build: ./app
     command: npm run dev
-    ports:
-      - "8080:8080"
   reverse-proxy:
     build: ./nginx
     ports:
